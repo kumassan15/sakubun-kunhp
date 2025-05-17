@@ -28,7 +28,8 @@
     nav {
       background-color: #ffe680;
       padding: 10px;
-      width: 240px;
+      width: 100%;
+      box-sizing: border-box;
     }
     nav ul {
       list-style: none;
@@ -47,6 +48,7 @@
     main {
       padding: 20px;
       flex: 1;
+      box-sizing: border-box;0
     }
     section {
       margin-bottom: 30px;
@@ -54,6 +56,7 @@
     .container {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column; 
     }
     dt {
       font-weight: bold;
@@ -76,12 +79,22 @@
   <header>
     <h1>英作文演習アプリ 作文くん</h1>
   </header>
-
   <div class="container">
     <nav>
-      <h2><span style="color: #ffcc00;">■</span> メニュー <span style="color: #ffcc00;">■</span></h2>
+      <h2><span style="color: #800080;">■</span> 〔教師用〕問題を準備する </h2>
+      <p>問題ファイル（テンプレート）をダウンロードします</p>
       <ul>
-        <li><a href="https://script.google.com/macros/s/AKfycbwysXSC9jlAcdwOS00iIJAyE01Is--bZhmwV796Y5qeFGvix4s-e8GluL2_5bxaM-dWfg/exec" target="_blank">作文くんへのリンク</a></li>
+        <li><a href="例題.xlsx" target="_blank">「例題.xlsx」をダウンロード</a></li>
+      </ul>
+      <p>問題管理ファイル（テンプレート）をダウンロードします</p>
+      <ul>
+        <li><a href="問題管理.xlsx" target="_blank">「問題管理.xlsx」をダウンロード</a></li>
+      </ul>     
+      
+      <h2><span style="color: #800080;">■</span> 〔生徒用〕問題を解く</h2>
+      <p>作文くんをリンクで開きます</p>
+      <ul>
+        <li><a href="https://script.google.com/macros/s/AKfycbwysXSC9jlAcdwOS00iIJAyE01Is--bZhmwV796Y5qeFGvix4s-e8GluL2_5bxaM-dWfg/exec" target="_blank">「作文くん」へのリンク</a></li>
       </ul>
     </nav>
 
@@ -90,7 +103,7 @@
         <h2>特徴</h2>
         <p>語句整序英作文問題演習ができます。多くのアプリでは、学習者が答案を作成して採点ボタンを押下すると、正解・不正解の判定と、正解と解説が表示されるだけで、次の問題に進みます。しかし、作文くんでは、いきなり正解と解説を表示するのではなく、学習者の誤答の種類に応じてヒントやフィードバックが与えられます。...</p>
         <ul>
-          <li><strong>問題作成・設定の自動化</strong><br>→ GoogleドキュメントやWordで作成した問題を自動変換</li>
+          /*<li><strong>問題作成・設定の自動化</strong><br>→ GoogleドキュメントやWordで作成した問題を自動変換</li>*/
           <li><strong>フィードバックが多彩</strong><br>→ 誤答のレベルや種類に応じた個別対応</li>
           <li><strong>学習結果の見える化</strong><br>→ 成績はメール送信、Excel管理可能</li>
           <li><strong>ほぼ全ての端末に対応</strong><br>→ iPad・PC・スマホでも可</li>
@@ -98,16 +111,11 @@
       </section>
 
       <section>
-        <h2>お試しコード</h2>
-        <ul>
-          <li><strong>管理番号:</strong> 1ISn9aHHIfw9_6iim6Go5bQyFXOP3wQ0h_kidvYPLLS4</li>
-          <li><strong>ユーザーID:</strong> 12345678</li>
-        </ul>
-      </section>
-
-            <section>
         <h2>プライバシーポリシー</h2>
-        <p>作文くんでは、学習者が成績を送信する機能があります。その際、メールアドレスは担当教師のみに通知され、それ以外の個人情報は収集しません。</p>
+        <ul>
+          <li>教師が問題ファイルや管理ファイルを本サイトからダウンロードする際、個人情報が収集されることはありません。
+          <li>生徒が作文くんで使用する問題データは、担当教師が準備するスプレッドシートを使用します。その際、個人情報は収集されません。</li>
+          <li>作文んくんでは、生徒が成績を送信する機能があります。その際、メールアドレスは担当教師のみに通知されますが、それ以外の個人情報は収集されません。</li>
       </section>
 
       <section>
