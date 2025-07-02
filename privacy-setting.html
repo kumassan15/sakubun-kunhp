@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | Sakubun-kun Mondai Sakusei</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      margin: 40px;
+      max-width: 800px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy – Sakubun-kun Mondai Sakusei</h1>
+  <p><strong>Last updated:</strong> July 2, 2025</p>
+
+  <h2>1. Overview</h2>
+  <p>
+    Sakubun-kun Mondai Sakusei is a tool that generates and manages question files for use with the Sakubun-kun SP/EX application. It utilizes Google Sheets and Google Drive for file creation, editing, and organization.
+  </p>
+
+  <h2>2. Data Collected and Purpose of Use</h2>
+  <ul>
+    <li><strong>Google Sheets:</strong> Used to create and manage question sheets.</li>
+    <li><strong>Google Drive:</strong> Used to store, organize, and replace files automatically.</li>
+  </ul>
+
+  <h2>3. Data Sharing and Disclosure</h2>
+  <p>
+    All files and data are stored within the user’s own Google Account.  
+    No user data is shared with or disclosed to any third parties.
+  </p>
+
+  <h2>4. Data Retention and Deletion</h2>
+  <ul>
+    <li>Files created or edited by this app remain in the user’s Google Drive.</li>
+    <li>No external servers are used. No data is transferred out of Google’s system.</li>
+    <li>Deleting a file through Drive will permanently delete the data.</li>
+  </ul>
+
+  <h2>5. Data Protection and Security</h2>
+  <p>
+    All access to user data is performed securely via Google APIs with the user’s explicit consent.
+  </p>
+  <p>
+    The following scopes are used (minimum required):
+  </p>
+  <ul>
+    <li>https://www.googleapis.com/auth/spreadsheets</li>
+    <li>https://www.googleapis.com/auth/drive</li>
+  </ul>
+  <p>
+    This application runs entirely within the secure Google Apps Script environment.  
+    No data is transmitted or stored outside Google services.
+  </p>
+
+  <h2>6. Contact</h2>
+  <p>
+    FUKUSHIMA Masanao<br>
+    Yamato University<br>
+    Email: <a href="mailto:fukushima.masanao@yamato-u.ac.jp">fukushima.masanao@yamato-u.ac.jp</a>
+  </p>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			console.log('Live reload enabled.');
+		})();
+	}
+	// ]]>
+</script>
+</body>
+</html>
