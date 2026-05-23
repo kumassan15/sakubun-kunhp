@@ -223,5 +223,46 @@
     <span>&copy; since 2006　FUKUSHIMA Masanao</span>　<span>このサイトのすべての書作物</span>は、<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>で提供されています。
   </small>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const colorSection = (texts, color) => {
+      const section = Array.from(document.querySelectorAll('section'))
+        .filter((targetSection) =>
+          texts.some((text) => targetSection.textContent.includes(text))
+        )
+        .sort((firstSection, secondSection) =>
+          firstSection.textContent.length - secondSection.textContent.length
+        )[0];
+
+      if (section) {
+        section.style.backgroundColor = color;
+      }
+    };
+
+    const sections = Array.from(document.querySelectorAll('section'));
+    const yellowSection = sections.find((section) => {
+      const match = getComputedStyle(section).backgroundColor.match(/\d+/g);
+
+      if (!match || match.length < 3) {
+        return false;
+      }
+
+      const [red, green, blue] = match.map(Number);
+      return red > 235 && green > 210 && blue < 230 && red >= green;
+    });
+
+    if (yellowSection) {
+      const yellowIndex = sections.indexOf(yellowSection);
+
+      sections.slice(yellowIndex + 1).forEach((section) => {
+        section.style.backgroundColor = '#e8f5e9';
+      });
+    }
+
+    colorSection(['特徴'], '#e8f5e9');
+    colorSection(['作文君の使い方', '作文くんの使い方'], '#e8f5e9');
+    colorSection(['英語ラボ'], '#fdecef');
+  });
+</script>
 </body>
 </html>
